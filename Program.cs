@@ -2,11 +2,17 @@
 
 namespace cohort_students
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+
+      var NSS = new Organization("Nashville Software School");
+
+      NSS.DoStuff();
+
+
+
     }
+  }
 }
