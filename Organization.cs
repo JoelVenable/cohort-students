@@ -48,6 +48,14 @@ namespace cohort_students
       var C31 = new Cohort() { Name = "Day Cohort 31" };
       var C32 = new Cohort() { Name = "Day Cohort 32" };
 
+      var adam = new Instructor()
+      {
+        FirstName = "Adam",
+        LastName = "Scheaffer",
+        Cohort = C32,
+        SlackHandle = "adamscheaf",
+        Specialty = "Just an awesome coder..."
+      };
 
 
       var sean = new Student() { FirstName = "Sean", LastName = "Glavin" };
@@ -61,6 +69,16 @@ namespace cohort_students
       Organization.AddStudentToCohort(april, C31);
 
 
+      adam.AssignExercise(ReactNutshell);
+
+
+      adam.AssignExercise(Nutshell);
+
+      joel.CompleteExercise(Nutshell);
+
+      ricky.PrintStatusReport();
+
+      joel.PrintStatusReport();
 
 
 

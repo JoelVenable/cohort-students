@@ -14,7 +14,7 @@ namespace cohort_students
 
     public void AssignExercise(Exercise assignment)
     {
-
+      Cohort.Students.ForEach(student => student.AddExercise(assignment));
     }
 
   }
