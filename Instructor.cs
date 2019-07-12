@@ -8,12 +8,13 @@ namespace cohort_students
     public string LastName { get; set; }
     public string SlackHandle { get; set; }
 
-    public Cohort myCohort { get; set; }
+    public Cohort Cohort { get; set; }
 
     public string Specialty { get; set; }
 
-    public void AssignExercise(Exercise assignment) {
-      
+    public void AssignExercise(Exercise assignment)
+    {
+
     }
 
   }

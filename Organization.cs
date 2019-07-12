@@ -55,10 +55,10 @@ namespace cohort_students
       var joel = new Student() { FirstName = "Joel", LastName = "Venable" };
       var april = new Student() { FirstName = "April", LastName = "Fools" };
 
-      C32.AddStudentToCohort(sean);
-      C32.AddStudentToCohort(ricky);
-      C32.AddStudentToCohort(joel);
-      C32.AddStudentToCohort(sean);
+      Organization.AddStudentToCohort(sean, C32);
+      Organization.AddStudentToCohort(ricky, C32);
+      Organization.AddStudentToCohort(joel, C32);
+      Organization.AddStudentToCohort(april, C31);
 
 
 
@@ -70,7 +70,14 @@ namespace cohort_students
 
     static void AddStudentToCohort(Student student, Cohort cohort)
     {
+      student.Cohort = cohort;
+      cohort.AddStudentToCohort(student);
+    }
 
+    static void AddInstuctorToCohort(Instructor instructor, Cohort cohort)
+    {
+      instructor.Cohort = cohort;
+      cohort.AddInstructor(instructor);
     }
 
 
